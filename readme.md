@@ -1,4 +1,4 @@
-##System Requirements
+## System Requirements
 
 phpGrid is operating system independent. It works on both Windows and Linux as long as the following components are installed:
 - PHP 5.3 or later
@@ -6,7 +6,7 @@ phpGrid is operating system independent. It works on both Windows and Linux as l
 - Major relational database such as MySQL/MariaDB, PostgreSQL, SQL Server, Oracle, DB2, SQL Lite, Access etc.
 
 If you are new to Apache/PHP/mySql, consider XAMPP or WAMP. Either installs Apache, PHP, and MySQL in one batch installation and requires almost no configuration for both Windows and Linux operating systems.
-##Technical Overview
+## Technical Overview
 - **System Environment**: Web-based
 - **Intended Audience**: Non-Technical Users, Web Developers,
 - **Language**: Multilingual
