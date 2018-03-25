@@ -19,10 +19,10 @@ Since the major system architecture shift in phpGrid version 4, the new version 
 PHP web-based editable datagrid now can be achieved in two lines of code rather than five lines in the previous version. It also use Cascading Style Sheets, or CSS, extensively for display related tasks, a perfect balance between simplicity and features.
 
 
-##Installation
+## Installation
 First and foremost, download the phpGrid from the download page, and then extract the zip file somewhere on your web server.
 
-####Configuration
+#### Configuration
 
 Before you begin coding using phpGrid, you must specify database information in conf.php. conf.php is our phpGrid configuration file in which we specify database connection parameters and path to the phpGrid.
 
@@ -59,7 +59,7 @@ require_once("phpGrid/conf.php"); // relative path to conf.php without leading s
 ```
 require_once(realpath($_SERVER["DOCUMENT_ROOT"]) ."/phpGrid/conf.php"); // absolute path to conf.php
 ```
-###Database Type
+### Database Type
 
 phpGrid supports wide range of database types. Simply define PHPGRID_DB_TYPE parameter value to your own database type. It can be one of the following strings. The default database type for phpGrid is “mysql”. PHPGRID_DB_TYPE string is case sensitive.
 
@@ -88,7 +88,7 @@ new phpGrid now supports local array data source without using a database.
 
  
 
-###PHP Grid Oracle 9, 10g, 11g, 12c
+### PHP Grid Oracle 9, 10g, 11g, 12c
 
 When using PHP datagrid for Oracle database with TNS (Transparent Network Substrate), replace the database host name with the TNS Name in conf.php e.g.
 
@@ -106,7 +106,7 @@ When NOT using Apache alias directive or IIS virtual directory, phpGrid can succ
 define('SERVER_ROOT', str_replace(str_replace('\', '/', realpath($_SERVER['DOCUMENT_ROOT'])),'', str_replace('\', '/',dirname(__FILE__))));
 ```
 
-###How to set SERVER_ROOT value manually
+### How to set SERVER_ROOT value manually
 
 When you do use Apache alias directive or IIS virtual directory, you need to set SERVER_ROOT value manually.
 
@@ -120,7 +120,7 @@ Another example, if the URL to phpGrid is http://www.yoursite.com/admin/phpGrid,
 ```
 define('SERVER_ROOT', '/admin/phpGrid');
 ```
-#phpGrid Constructor
+# phpGrid Constructor
 After successful installation, call the constructor similar to the following:
 
 ```
@@ -144,7 +144,7 @@ Note that composite PK is not supported as foreign key referential in master/det
 
 `Do NOT include WHERE clause in $sql. Instead use set_query_filter() method (version 4.2+) to set query filter. If not using the wildcard star(*), the SELECT statement MUST include the primary key as one of the columns.`
 
-##Single primary key:
+## Single primary key:
 
 ```
 $dg = new C_DataGrid("SELECT * FROM Orders", "orderNumber", 'Orders');
@@ -161,7 +161,7 @@ $dg = new C_DataGrid("SELECT * FROM orderdetails", array("productCode", "orderNu
 ```
 Check out the composite primary key online example.
 
-##set_query_filter($WHERE)
+## set_query_filter($WHERE)
 + Parameters:
     + $WHERE: Sql WHERE statement to select data conditionally (DO NOT include WHERE keyword).
 + Description:
@@ -173,7 +173,7 @@ Check out the composite primary key online example.
 ```
 $dg -> set_query_filter("status='Shipped' AND YEAR(shippedDate) = 2003");
 ```
-#enable_edit() *
+# enable_edit() *
 * Please note this feature is only available in paid versions.
 
 + Parameters:
@@ -197,7 +197,7 @@ $dg -> enable_edit('FORM', 'CRU'); // Everything is allowed but delete
 ```
 It’s also possible to load a custom form in an iframe in a modal window with your own custom CRUD scripts. 
 
-#enable_export()
+# enable_export()
 + Parameter(s):
     + $type: Export type can be EXCEL, EXCELXML, CSV, or HTML. The default is EXCEL, the native .xls format. EXCELXML is the OpenOffice .xml format.
 + Description:
@@ -209,7 +209,7 @@ Export in Excel
 $dg -> enable_export('EXCEL');
 ```
 
-#form_only() *
+# form_only() *
 * Please note Form-only mode is only available in paid versions. It is supported from version 7.0 and above.
 
 + Parameter(s):
@@ -222,7 +222,7 @@ $dg -> enable_export('EXCEL');
 ```
 $dg -> enable_edit('FORM') -> form_only();
 ```
-#enable_pagecount()
+# enable_pagecount()
 + Parameters:
     + $page_count: boolean: true or false.
 + Description:
