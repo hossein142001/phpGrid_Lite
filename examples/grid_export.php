@@ -25,7 +25,7 @@ $dg -> set_col_hidden("requiredDate");
 $dg -> set_caption("Orders List");
 
 // set export type
-$dg -> enable_export('EXCEL');
+$dg -> enable_export('HTML');
 
 $dg -> display();
 ?>

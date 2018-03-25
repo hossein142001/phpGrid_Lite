@@ -1,8 +1,6 @@
 
 <?php   
-	error_reporting(E_ALL);    
-	ini_set('display_errors', 1);    
-	require_once(dirname(__FILE__) .'/conf.php');   
+	require_once(dirname(__FILE__) .'/conf.php');
 	require_once(dirname(__FILE__) .'/server/classes/cls_db.php');   
 	require_once(dirname(__FILE__) .'/server/classes/cls_datagrid.php');   
 	require_once(dirname(__FILE__) .'/server/classes/cls_util.php');   

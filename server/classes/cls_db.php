@@ -14,7 +14,7 @@ class C_Database
 	public $dbType;
 	public $db;
 	public $result;
-	public function __construct ($host, $user, $pass, $dbName, $db_type = "mysql")
+	public function __construct ($host, $user, $pass, $dbName, $db_type = "mysqli")
 	{
 		$this->_EA111FC288B46F7C89F82D6D216D62A6 = $host;
 		$this->_A8CA282CA0B84C15FD52B637B16B6AC1 = $user;
@@ -79,7 +79,7 @@ class C_Database
 			case "sqlit":
 				break;
 			default:
-				$this->db = &ADONewConnection($this->dbType);
+				$this->db = ADONewConnection($this->dbType);
 				$this->db->PConnect($this->_EA111FC288B46F7C89F82D6D216D62A6, 
 				$this->_A8CA282CA0B84C15FD52B637B16B6AC1, $this->password, 
 				$this->databaseName) or

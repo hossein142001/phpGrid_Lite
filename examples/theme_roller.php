@@ -31,7 +31,7 @@ $dg -> enable_export('EXCEL');
 $dg -> enable_search(true);
 
 // set height and weight of datagrid
-$dg -> set_dimension(800, 600); 
+$dg -> set_dimension(800, 600);
 
 // increase pagination size to 40 from default 20
 $dg -> set_pagesize(40);
